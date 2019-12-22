@@ -195,11 +195,7 @@ module ActiveAdmin
       :after,  :skip_after,
       :around, :skip
     ]
-    keywords = if Jets::VERSION::MAJOR == 5 && Jets::VERSION::MINOR >= 1
-                 [:action]
-               else
-                 [:action, :filter]
-               end
+    keywords = [:action, :filter]
 
     keywords.each do |name|
       phases.each do |action|
