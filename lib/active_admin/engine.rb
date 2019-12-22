@@ -1,5 +1,5 @@
 module ActiveAdmin
-  class Engine < ::Rails::Engine
+  class Engine < ::Jets::Engine
     initializer "active_admin.load_app_path" do |app|
       ActiveAdmin::Application.setting :app_path, app.root
       ActiveAdmin::Application.setting :load_paths, [File.expand_path('app/admin', app.root)]

@@ -45,7 +45,7 @@ module ActiveAdmin
 
         # NOTE: `relative_url_root` is deprecated by Rails.
         #       Remove prefix here if it is removed completely.
-        prefix = Rails.configuration.action_controller[:relative_url_root] || ''
+        prefix = Jets.configuration.action_controller[:relative_url_root] || ''
         prefix + path
       end
     end

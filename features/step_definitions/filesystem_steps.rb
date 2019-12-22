@@ -25,7 +25,7 @@ module ActiveAdminContentsRollback
       File.delete(file)
       begin
         dir = File.dirname(file)
-        until dir == Rails.root
+        until dir == Jets.root
           Dir.rmdir(dir)                        # delete current folder
           dir = dir.split('/')[0..-2].join('/') # select parent folder
         end
@@ -42,7 +42,7 @@ After '@changes-filesystem' do
 end
 
 Given /^"([^"]*)" contains:$/ do |filename, contents|
-  path = Rails.root + filename
+  path = Jets.root + filename
   FileUtils.mkdir_p File.dirname path
   record path
 
@@ -50,7 +50,7 @@ Given /^"([^"]*)" contains:$/ do |filename, contents|
 end
 
 Given /^I add "([^"]*)" to the "([^"]*)" model$/ do |code, model_name|
-  path = Rails.root.join "app", "models", "#{model_name}.rb"
+  path = Jets.root.join "app", "models", "#{model_name}.rb"
   record path
 
   str = File.read(path).gsub /^(class .+)$/, "\\1\n  #{code}\n"

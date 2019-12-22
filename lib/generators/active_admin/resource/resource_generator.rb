@@ -2,7 +2,7 @@ require 'active_admin/generators/boilerplate'
 
 module ActiveAdmin
   module Generators
-    class ResourceGenerator < Rails::Generators::NamedBase
+    class ResourceGenerator < Jets::Generators::NamedBase
       desc "Registers resources with Active Admin"
 
       class_option :include_boilerplate, type: :boolean, default: false,
