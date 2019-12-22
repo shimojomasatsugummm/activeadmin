@@ -176,7 +176,7 @@ module ActiveAdmin
     # files from being loaded twice in production.
     def remove_active_admin_load_paths_from_rails_autoload_and_eager_load
       ActiveSupport::Dependencies.autoload_paths -= load_paths
-      Jets.application.config.eager_load_paths  -= load_paths
+      #Jets.application.config.eager_load_paths  -= load_paths
     end
 
     # Hook into the Jets code reloading mechanism so that things are reloaded
