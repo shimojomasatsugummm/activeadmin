@@ -10,7 +10,7 @@ module ActiveAdmin
     #
     register :default_namespace, :admin
 
-    register :app_path, Rails.root
+    register :app_path, Jets.root
 
     # Load paths for admin configurations. Add folders to this load path
     # to load up other resources for administration. External gems can

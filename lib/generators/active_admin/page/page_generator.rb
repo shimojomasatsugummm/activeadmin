@@ -1,6 +1,6 @@
 module ActiveAdmin
   module Generators
-    class PageGenerator < Rails::Generators::NamedBase
+    class PageGenerator < Jets::Generators::NamedBase
       source_root File.expand_path('templates', __dir__)
 
       def generate_config_file

@@ -1,6 +1,6 @@
 module ActiveAdmin
   module Generators
-    class AssetsGenerator < Rails::Generators::Base
+    class AssetsGenerator < Jets::Generators::Base
 
       source_root File.expand_path('templates', __dir__)
 

@@ -195,7 +195,7 @@ module ActiveAdmin
       :after,  :skip_after,
       :around, :skip
     ]
-    keywords = if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR >= 1
+    keywords = if Jets::VERSION::MAJOR == 5 && Jets::VERSION::MINOR >= 1
                  [:action]
                else
                  [:action, :filter]
